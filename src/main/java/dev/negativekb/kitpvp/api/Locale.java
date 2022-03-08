@@ -29,6 +29,10 @@ public enum Locale {
     private final List<String> defaultMessage;
     private ConfigMessage message;
 
+    /**
+     * Initializes the official messages {@link ConfigMessage} instances
+     * @param manager {@link ConfigMessageManager}
+     */
     public static void init(ConfigMessageManager manager) {
         Arrays.stream(values()).forEach(locale ->
                 locale.message = manager.createMessage(locale.id, locale.getDefaultMessage().toArray(new String[0])));
@@ -36,14 +40,23 @@ public enum Locale {
         manager.reload();
     }
 
+    /**
+     * See {@link ConfigMessage#send(CommandSender...)} for documentation
+     */
     public void send(CommandSender... senders) {
         message.send(senders);
     }
 
+    /**
+     * See {@link ConfigMessage#broadcast()} for documentation
+     */
     public void broadcast() {
         message.broadcast();
     }
 
+    /**
+     * See {@link ConfigMessage#replace(String, String)} for documentation
+     */
     public ConfigMessage replace(String placeholder, String replacement) {
         return message.replace(placeholder, replacement);
     }
