@@ -1,8 +1,15 @@
 package dev.negativekb.kitpvp.api;
 
-import org.bukkit.plugin.java.JavaPlugin;
+import lombok.Getter;
+import lombok.Setter;
 
-public final class KitPvPAPI {
+/**
+ * Represents the bridge between external plugins and the core plugin
+ */
+public abstract class KitPvPAPI {
+
+    @Getter @Setter
+    private static KitPvPAPI instance;
 
 
 }
