@@ -1,0 +1,3 @@
+name: KitPvPAPI
+version: '${project.version}'
+main: dev.negativekb.kitpvp.api.KitPvPAPI
