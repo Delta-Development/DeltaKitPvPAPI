@@ -16,4 +16,10 @@ public abstract class KitPvPAPI {
      * @return {@link ProfileManager}
      */
     public abstract ProfileManager getProfileManager();
+
+    /**
+     * Get the instance of {@link ConfigMessageManager}
+     * @return {@link ConfigMessageManager}
+     */
+    public abstract ConfigMessageManager getMessageManager();
 }
