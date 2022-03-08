@@ -11,5 +11,9 @@ public abstract class KitPvPAPI {
     @Getter @Setter
     private static KitPvPAPI instance;
 
-
+    /**
+     * Get the instance of {@link ProfileManager}
+     * @return {@link ProfileManager}
+     */
+    public abstract ProfileManager getProfileManager();
 }
