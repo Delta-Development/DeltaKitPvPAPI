@@ -9,6 +9,7 @@ import java.util.UUID;
 
 /**
  * Represents the management class for {@link Profile}
+ * @author Negative
  */
 public interface ProfileManager {
 

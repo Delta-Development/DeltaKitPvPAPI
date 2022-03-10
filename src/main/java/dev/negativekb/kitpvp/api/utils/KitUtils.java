@@ -10,6 +10,10 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Represents the utility class for general use.
+ * @author Negative
+ */
 @UtilityClass
 public class KitUtils {
 

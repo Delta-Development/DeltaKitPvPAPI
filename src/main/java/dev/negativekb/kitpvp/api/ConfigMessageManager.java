@@ -7,7 +7,9 @@ import java.util.Collection;
 
 /**
  * Represents the management class for {@link ConfigMessage}
+ * <p>
  * Access via {@link KitPvPAPI}
+ * @author Negative
  */
 public interface ConfigMessageManager {
 

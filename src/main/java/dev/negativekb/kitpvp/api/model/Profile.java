@@ -6,6 +6,7 @@ import java.util.UUID;
 
 /**
  * Represents the data class for custom player statistics
+ * @author Negative
  */
 public interface Profile {
 

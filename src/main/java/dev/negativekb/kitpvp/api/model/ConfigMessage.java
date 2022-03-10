@@ -7,6 +7,7 @@ import java.util.Collection;
 
 /**
  * Represents an entry in the messages.yml file
+ * @author Negative
  */
 public interface ConfigMessage {
 

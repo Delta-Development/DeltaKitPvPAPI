@@ -5,6 +5,7 @@ import lombok.Setter;
 
 /**
  * Represents the bridge between external plugins and the core plugin
+ * @author Negative
  */
 public abstract class KitPvPAPI {
 
