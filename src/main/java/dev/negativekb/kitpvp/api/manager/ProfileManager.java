@@ -2,6 +2,8 @@ package dev.negativekb.kitpvp.api.manager;
 
 import dev.negativekb.kitpvp.api.model.Profile;
 import dev.negativekb.kitpvp.api.option.Disableable;
+import org.bukkit.OfflinePlayer;
+import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -22,6 +24,27 @@ public interface ProfileManager extends Disableable {
      */
     @Nullable
     Profile getProfile(@NotNull UUID uuid);
+
+    /**
+     * Get a {@link Profile} from the provided {@link UUID}
+     * @param player {@link Player} instance
+     * @return {@link Profile}
+     * @throws NullPointerException If the {@link Profile} does not exist.
+     */
+    @Nullable
+    default Profile getProfile(@NotNull Player player) {
+        return getProfile(player.getUniqueId());
+    }
+
+    /**
+     * Get a {@link Profile} from the provided {@link UUID}
+     * @param player {@link OfflinePlayer} instance
+     * @return {@link Profile}
+     * @throws NullPointerException If the {@link Profile} does not exist.
+     */
+    default Profile getProfile(@NotNull OfflinePlayer player) {
+        return getProfile(player.getUniqueId());
+    }
 
     /**
      * Adds a new {@link Profile}

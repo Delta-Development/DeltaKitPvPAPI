@@ -121,6 +121,8 @@ public interface Profile {
      */
     default void addKillStreak(int amount) {
         setKillStreak(getKillStreak() + amount);
+        if (getBestKillStreak() < getKillStreak())
+            setBestKillStreak(getKillStreak());
     }
 
     /**

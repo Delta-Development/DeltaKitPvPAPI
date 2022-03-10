@@ -28,7 +28,78 @@ public enum Locale {
       */
     PLAYER_NOT_ONLINE("player-not-online", Collections.singletonList(
             "&cThe player &e%player% &ccould not be found."
-    ))
+    )),
+
+    /**
+     * Represents the message you will get if you kill a player.
+     * <p>
+     * All placeholders are:
+     * <p>
+     * %player% | Represents the player's (victim's) raw in-game-name.
+     * <p>
+     * %displayname% | Represents the player's (victim's) formatted in-game-name. Such as prefixes and suffixes.
+     */
+    KILLED_PLAYER("killed-player", Collections.singletonList(
+            "&aYou have killed &e%player%&a."
+    )),
+
+    /**
+     * Represents the message you will get if you die to a player.
+     * <p>
+     * All placeholders are:
+     * <p>
+     * %player% | Represents the player's (killer's) raw in-game-name/
+     * <p>
+     * %displayname% | Represents the player's (killer's) formatted in-game-name. Such as prefixes and suffixes.
+     */
+    KILLED_BY_PLAYER("killed-by-player", Collections.singletonList(
+            "&cYou have been killed by &e%player%&c."
+    )),
+
+    /**
+     * Represents the message you will get if you die.
+     * <p>
+     * All placeholders are:
+     * <p>
+     * No placeholders.
+     */
+    KILLED_BY_ENVIRONMENT("killed-by-environment", Collections.singletonList(
+            "&cYou have died."
+    )),
+
+    /**
+     * Represents the message you will get if you die on a killstreak higher than x ({@link Integer}).
+     * <p>
+     * All placeholders are:
+     * <p>
+     * %victim% | Represents the victim's raw in-game-name.
+     * <p>
+     * %victim-displayname% | Represents the victim's formatted in-game-name. Such as prefixes and suffixes.
+     * <p>
+     * %killstreak-raw% | Represents the raw killstreak number without any fancy formatting.
+     * <p>
+     * %killstreak-formatted% | Represents the formatted killstreak number. Example: 1,000 rather than 1000
+     */
+    KILLSTREAK_END("killstreak-end", Collections.singletonList(
+            "&6[KillStreaks]: &6%victim% &ewas killed on a killstreak of &6%killstreak-formatted%&e."
+    )),
+
+    /**
+     * Represents the message you will get if you obtain a new killstreak announcement goal.
+     * <p>
+     * All placeholders are:
+     * <p>
+     * %player% | Represents the player's raw in-game-name.
+     * <p>
+     * %displayname% | Represents the player's formatted in-game-name. Such as prefixes and suffixes.
+     * <p>
+     * %killstreak-raw% | Represents the raw killstreak number without any fancy formatting.
+     * <p>
+     * %killstreak-formatted% | Represents the formatted killstreak number. Example: 1,000 rather than 1000
+     */
+    KILLSTREAK_ANNOUNCEMENT("killstreak-announcement", Collections.singletonList(
+            "&6[KillStreaks]: &6%player% &ehas reached a killstreak of &6&l%killstreak-formatted%"
+    )),
 
     ;
     private final String id;
