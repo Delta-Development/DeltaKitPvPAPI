@@ -22,7 +22,7 @@ public enum Locale {
      * <p>
      * All placeholders are:
      * <p>
-     * * %player% | Represents the player the user attempted to lookup.
+     * %player% | Represents the player the user attempted to lookup.
       */
     PLAYER_NOT_ONLINE("player-not-online", Collections.singletonList(
             "&cThe player &e%player% &ccould not be found."
