@@ -1,5 +1,6 @@
-package dev.negativekb.kitpvp.api;
+package dev.negativekb.kitpvp.api.manager;
 
+import dev.negativekb.kitpvp.api.KitPvPAPI;
 import dev.negativekb.kitpvp.api.model.ConfigMessage;
 import org.jetbrains.annotations.NotNull;
 

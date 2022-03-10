@@ -1,5 +1,7 @@
 package dev.negativekb.kitpvp.api;
 
+import dev.negativekb.kitpvp.api.manager.ConfigMessageManager;
+import dev.negativekb.kitpvp.api.manager.ProfileManager;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,7 +11,6 @@ import lombok.Setter;
  */
 public abstract class KitPvPAPI {
 
-    @Getter @Setter
     private static KitPvPAPI instance;
 
     /**
@@ -23,4 +24,19 @@ public abstract class KitPvPAPI {
      * @return {@link ConfigMessageManager}
      */
     public abstract ConfigMessageManager getMessageManager();
+
+    /**
+     * @return the instance of {@link KitPvPAPI}
+     */
+    public static KitPvPAPI getInstance() {
+        return instance;
+    }
+
+    /**
+     * Set a new instance of {@link KitPvPAPI}
+     * @param instance Subclass of {@link KitPvPAPI}
+     */
+    protected static void setInstance(KitPvPAPI instance) {
+        KitPvPAPI.instance = instance;
+    }
 }

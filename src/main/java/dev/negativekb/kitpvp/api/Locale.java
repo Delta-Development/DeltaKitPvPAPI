@@ -1,5 +1,6 @@
 package dev.negativekb.kitpvp.api;
 
+import dev.negativekb.kitpvp.api.manager.ConfigMessageManager;
 import dev.negativekb.kitpvp.api.model.ConfigMessage;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
