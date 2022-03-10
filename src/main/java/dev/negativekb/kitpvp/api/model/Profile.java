@@ -1,6 +1,7 @@
 package dev.negativekb.kitpvp.api.model;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.UUID;
 
@@ -182,5 +183,30 @@ public interface Profile {
             return true;
         }
         return false;
+    }
+
+    /**
+     * Get the current {@link Kit} applied to the player
+     * @return {@link String}
+     * @throws NullPointerException If they do not have a {@link Kit} applied
+     */
+    @Nullable
+    String getCurrentKit();
+
+    /**
+     * Set the current {@link Kit} of the player
+     * @param kit {@link Kit} ID ({@link String})
+     */
+    void setCurrentKit(@Nullable String kit);
+
+    /**
+     * Set the current {@link Kit} of the player
+     * @param kit {@link Kit} instance
+     */
+    default void setCurrentKit(@Nullable Kit kit) {
+        if (kit == null)
+            setCurrentKit((String) null);
+        else
+            setCurrentKit(kit.getID());
     }
 }

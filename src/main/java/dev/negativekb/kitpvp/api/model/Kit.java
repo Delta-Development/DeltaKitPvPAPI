@@ -1,5 +1,6 @@
 package dev.negativekb.kitpvp.api.model;
 
+import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -60,6 +61,13 @@ public interface Kit {
      */
     @Nullable
     ItemStack getBoots();
+
+    /**
+     * Apply the {@link Kit} to the {@link Player}
+     * @param player {@link Player} to be applied to
+     * @param profile {@link Profile} of the {@link Player}
+     */
+    void apply(@NotNull Player player, @Nullable Profile profile);
 
 
 }
