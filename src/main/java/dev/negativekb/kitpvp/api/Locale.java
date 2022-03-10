@@ -19,7 +19,11 @@ public enum Locale {
     /**
      * Represents the message you will get if you attempted to find
      * a player which is not online.
-     */
+     * <p>
+     * All placeholders are:
+     * <p>
+     * * %player% | Represents the player the user attempted to lookup.
+      */
     PLAYER_NOT_ONLINE("player-not-online", Collections.singletonList(
             "&cThe player &e%player% &ccould not be found."
     ))
