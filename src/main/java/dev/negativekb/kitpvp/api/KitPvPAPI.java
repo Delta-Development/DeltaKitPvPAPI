@@ -2,6 +2,7 @@ package dev.negativekb.kitpvp.api;
 
 import dev.negativekb.kitpvp.api.manager.ConfigMessageManager;
 import dev.negativekb.kitpvp.api.manager.ProfileManager;
+import dev.negativekb.kitpvp.api.model.SpawnLocation;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -24,6 +25,12 @@ public abstract class KitPvPAPI {
      * @return {@link ConfigMessageManager}
      */
     public abstract ConfigMessageManager getMessageManager();
+
+    /**
+     * Get the instance of {@link SpawnLocation}
+     * @return {@link SpawnLocation}
+     */
+    public abstract SpawnLocation getSpawnLocation();
 
     /**
      * @return the instance of {@link KitPvPAPI}
