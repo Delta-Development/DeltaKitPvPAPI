@@ -16,6 +16,7 @@ import java.util.List;
  */
 @RequiredArgsConstructor
 @Getter
+@SuppressWarnings("all") // Because autocorrect
 public enum Locale {
 
     /**
