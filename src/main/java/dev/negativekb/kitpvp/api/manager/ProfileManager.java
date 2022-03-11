@@ -56,9 +56,9 @@ public interface ProfileManager extends Disableable {
 
     /**
      * Remove the provided {@link Profile}
-     * @param profile {@link Profile}
+     * @param uuid {@link UUID} of the {@link Profile}
      */
-    void removeProfile(@NotNull Profile profile);
+    void removeProfile(@NotNull UUID uuid);
 
     /**
      * Get an unmodifiable {@link Collection} of {@link Profile}

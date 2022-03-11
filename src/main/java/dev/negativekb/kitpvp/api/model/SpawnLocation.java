@@ -1,6 +1,5 @@
 package dev.negativekb.kitpvp.api.model;
 
-import dev.negativekb.kitpvp.api.option.Reloadable;
 import org.bukkit.Location;
 import org.bukkit.Sound;
 import org.bukkit.configuration.ConfigurationSection;

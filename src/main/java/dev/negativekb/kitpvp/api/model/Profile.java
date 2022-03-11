@@ -1,22 +1,12 @@
 package dev.negativekb.kitpvp.api.model;
 
-import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-
-import java.util.UUID;
 
 /**
  * Represents the data class for custom player statistics
  * @author Negative
  */
 public interface Profile {
-
-    /**
-     * The unique identifier of the player
-     * @return {@link UUID}
-     */
-    @NotNull
-    UUID getUniqueID();
 
     /**
      * Get the kills statistic
